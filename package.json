@@ -1,0 +1,14 @@
+{
+  "name": "militia-next",
+  "private": true,
+  "scripts": {
+    "build": "pnpm run build:cms && pnpm run build:web",
+    "build:cms": "cd cms && pnpm install --frozen-lockfile=false && pnpm run build",
+    "build:web": "cd web && pnpm install --frozen-lockfile=false && pnpm run build",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  },
+  "packageManager": "pnpm@10.20.0"
+}
